@@ -42,7 +42,7 @@
 **
 *****************************************************************************
 */
-
+//#if 0
 /* Includes */
 #include <sys/stat.h>
 #include <stdlib.h>
@@ -64,7 +64,6 @@ register char * stack_ptr asm("sp");
 
 char *__env[1] = { 0 };
 char **environ = __env;
-
 
 /* Functions */
 void initialise_monitor_handles()
@@ -202,3 +201,4 @@ int _execve(char *name, char **argv, char **env)
 	errno = ENOMEM;
 	return -1;
 }
+//#endif
