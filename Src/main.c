@@ -249,7 +249,7 @@ void StartDefaultTask(void const * argument)
 {
 
   /* USER CODE BEGIN 5 */
-	xTaskCreate( vInitTask, "Init Task", 200, (void*)0, configMAX_PRIORITIES-4, NULL );
+	xTaskCreate((TaskFunction_t) vInitTask, "Init Task", 200, (void*)0, configMAX_PRIORITIES-4, NULL );
 	vTaskDelete(NULL);
   /* Infinite loop */
   for(;;)

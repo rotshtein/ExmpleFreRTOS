@@ -7,6 +7,7 @@
  _Bool is_button_pressed()
  {
 	 //return (HAL_GPIO_ReadPin(BLUE_BUTTON_GPIO_Port, BLUE_BUTTON_Pin));
+	 return 0;
  }
 
  void set_green_led(_Bool state)
